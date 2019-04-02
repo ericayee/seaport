@@ -104,3 +104,8 @@ body, html {
   flex: 1 0 50%;
   text-align: center;
 }
+
+video {
+  width: 100%;
+  height: auto;
+}
