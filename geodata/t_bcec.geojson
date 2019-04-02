@@ -1,0 +1,23 @@
+{
+"type":"FeatureCollection",
+"crs": { "type": "name",  "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+
+"features": [
+{ "type":"Feature", "properties":{ "latitude": 42.366027502577744, "longitude": -71.06087923049925, "time": 1, "id": "route1", "name": "North Station" }, "geometry": { "type":"Point", "coordinates": [-71.06087923049925, 42.366027502577744]}},
+{ "type":"Feature", "properties":{ "latitude": 42.36574212796946, "longitude": -71.06072902679443, "time": 2, "id": "route1", "name": "Along route" } , "geometry": { "type":"Point", "coordinates":[-71.06072902679443, 42.36574212796946]}},
+{ "type":"Feature", "properties":{ "latitude": 42.36618604346665, "longitude": -71.05995655059814, "time": 3, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.05995655059814, 42.36618604346665]}},
+{ "type":"Feature", "properties":{ "latitude": 42.36479086991267, "longitude": -71.0585832595825, "time": 4, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.0585832595825, 42.36479086991267]}},
+{ "type":"Feature", "properties":{ "latitude": 42.36407741691762, "longitude": -71.05841159820557, "time": 5, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.05841159820557, 42.36407741691762]}},
+{ "type":"Feature", "properties":{ "latitude": 42.36318955298668, "longitude": -71.05817556381226, "time": 6, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.05817556381226, 42.36318955298668]}},
+{ "type":"Feature", "properties":{ "latitude": 42.362238256279966, "longitude": -71.05778932571411, "time": 7, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.05778932571411, 42.362238256279966]}},
+{ "type":"Feature", "properties":{ "latitude": 42.358718333226086, "longitude": -71.05783224105835, "time": 8, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.05783224105835, 42.358718333226086]}},
+{ "type":"Feature", "properties":{ "latitude": 42.35790967440147, "longitude": -71.0578966140747, "time": 9, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.0578966140747, 42.35790967440147]}},
+{ "type":"Feature", "properties":{ "latitude": 42.35546777871744, "longitude": -71.06055736541747, "time": 10, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.06055736541747, 42.35546777871744]}},
+{ "type":"Feature", "properties":{ "latitude": 42.35437365181817, "longitude": -71.0590124130249, "time": 11, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.0590124130249, 42.35437365181817]}},
+{ "type":"Feature", "properties":{ "latitude": 42.35343807892731, "longitude": -71.05774641036987, "time": 12, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.05774641036987, 42.35343807892731]}},
+{ "type":"Feature", "properties":{ "latitude": 42.35323193387558, "longitude": -71.05690956115723, "time": 13, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.05690956115723, 42.35323193387558]}},
+{ "type":"Feature", "properties":{ "latitude": 42.35245491952622, "longitude": -71.05510711669922, "time": 14, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.05510711669922, 42.35245491952622]}},
+{ "type":"Feature", "properties":{ "latitude": 42.34898202369824, "longitude": -71.0475754737854, "time": 15, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.0475754737854, 42.34898202369824]}},
+{ "type":"Feature", "properties":{ "latitude": 42.347713338102785, "longitude": -71.04487180709839, "time": 16, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.04487180709839, 42.347713338102785]}},
+{ "type":"Feature", "properties":{ "latitude": 42.347713338102785, "longitude": -71.0446572303772, "time": 17, "id": "route1", "name": "BCEC" }, "geometry":{ "type":"Point", "coordinates":[-71.0446572303772, 42.347713338102785]}}
+]}
