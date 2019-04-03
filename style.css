@@ -58,9 +58,6 @@ blockquote p {
   margin-right: 5px;
 }
 
-
-/* DEFAULT STYLES FOR TEMPLATE - DO NOT MODIFY */
-
 body, html {
   margin: 0px;
   padding: 0px;
@@ -74,7 +71,7 @@ body, html {
   -moz-box-sizing: border-box;
 }
 
-.sticky-container {
+/* .sticky-container {
   position: relative;
   z-index: 100;
   width: 100%;
@@ -103,9 +100,17 @@ body, html {
   height: 100vh;
   flex: 1 0 50%;
   text-align: center;
-}
+} */
 
 video {
   width: 100%;
   height: auto;
+}
+
+#thanks {
+  font-style: italic;
+}
+
+#thanks span {
+  color: steelblue;
 }
