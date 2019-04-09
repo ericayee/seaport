@@ -39,5 +39,5 @@
 { "type":"Feature", "properties":{ "latitude": 42.351566891364364, "longitude": -71.05042934417725, "time": 34, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.05042934417725, 42.351566891364364]}},
 { "type":"Feature", "properties":{ "latitude": 42.35124973540876, "longitude": -71.04978561401367, "time": 35, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.04978561401367, 42.35124973540876]}},
 { "type":"Feature", "properties":{ "latitude": 42.35175718416955, "longitude": -71.04939937591553, "time": 36, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.04939937591553, 42.35175718416955]}},
-{ "type":"Feature", "properties":{ "latitude": 42.35191576106715, "longitude": -71.0490560531616, "time": 37, "id": "route1", "name": "Boston Children's Museum" }, "geometry":{ "type":"Point", "coordinates":[-71.0490560531616, 42.35191576106715]}}
+{ "type":"Feature", "properties":{ "latitude": 42.35191576106715, "longitude": -71.0490560531616, "time": 37, "id": "route1", "name": "Children's Museum" }, "geometry":{ "type":"Point", "coordinates":[-71.0490560531616, 42.35191576106715]}}
 ]}

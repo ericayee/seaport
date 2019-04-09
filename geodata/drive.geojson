@@ -37,5 +37,5 @@
 { "type":"Feature", "properties":{ "latitude": 42.35312093241379, "longitude": -71.04845523834229, "time": 32, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.04845523834229, 42.35312093241379]}},
 { "type":"Feature", "properties":{ "latitude": 42.35378693824381, "longitude": -71.04789733886719, "time": 33, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.04789733886719, 42.35378693824381]}},
 { "type":"Feature", "properties":{ "latitude": 42.352106052816104, "longitude": -71.0441207885742, "time": 34, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.0441207885742, 42.352106052816104]}},
-{ "type":"Feature", "properties":{ "latitude": 42.352423204450766, "longitude": -71.04390621185303, "time": 35, "id": "route1", "name": "ICA" }, "geometry":{ "type":"Point", "coordinates":[-71.04390621185303, 42.352423204450766]}}
+{ "type":"Feature", "properties":{ "latitude": 42.352423204450766, "longitude": -71.04390621185303, "time": 35, "id": "route1", "name": "Seaport office" }, "geometry":{ "type":"Point", "coordinates":[-71.04390621185303, 42.352423204450766]}}
 ]}
