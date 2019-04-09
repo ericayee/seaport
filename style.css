@@ -2,6 +2,11 @@
 
 @import url("https://use.typekit.net/hfj0jxt.css");
 
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 
 body {
   font-family: 'mr-eaves-modern', sans-serif;
@@ -36,13 +41,15 @@ p {
 blockquote {
   background: #F1F8FE;
   border-radius: 5px;
-  margin-left: -20px;
+  margin-right: 150px;
+  margin-left: -20%;
 }
 
 blockquote p {
-  padding: 10px 20px 10px 20px;
+  padding: 30px 40px 30px 20px;
   font-size: 100%;
 }
+
 
 .quote-text::before {
   content: '\201C';
@@ -52,10 +59,17 @@ blockquote p {
   content: '\201D';
 }
 
+.quote-text {
+  padding-bottom: 0px;
+}
+
 .quote-cite {
   font-style: italic;
   text-align: right;
+  padding-top: 0px;
+  margin-top: 0px;
   margin-right: 5px;
+  margin bottom: 20px;
 }
 
 body, html {
@@ -64,47 +78,36 @@ body, html {
 }
 
 .full-width {
-  width: 100%;
+  width: 80%;
   padding: 25px;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  margin: auto;
 }
 
-/* .sticky-container {
-  position: relative;
-  z-index: 100;
-  width: 100%;
+.row {
   display: flex;
-  flex-direction: row;
 }
 
-.sticky-content {
-  position: relative;
-  display: flex;
-  flex: 1 0 50%;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 25px;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
 }
-
-.sticky-graphic {
-  z-index: -100;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 10px;
-  height: 100vh;
-  flex: 1 0 50%;
-  text-align: center;
-} */
 
 video {
   width: 100%;
   height: auto;
+}
+
+.sectionheader {
+}
+
+h4 {
+  font-size: 125%;
+  font-weight: 300;
+}
+
+.sectionheader h3 {
+  font-size: 120%;
 }
 
 #thanks {
