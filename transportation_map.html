@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/hfj0jxt.css">
   <script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
   <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
-  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
   <style>
     html,
     body {
@@ -40,14 +41,14 @@
   }
   .lineConnect {
     fill: none;
-    stroke: black;
+    stroke: #4f5c5e;
     opacity: 1;
   }
   .locnames {
     fill: black;
-    text-shadow: 1px 1px 1px #FFF, 3px 3px 5px #000;
-    font-weight: bold;
-    font-size: 13px;
+    font-weight: 400;
+    font-size: 14px;
+    font: mr-eaves-modern;
   }
 </style>
 
@@ -62,7 +63,7 @@
       <option value="bike">Bike from Northeastern University to the ICA</option>
       <option value="mbtaToBCEC">Take public transportation from the North End to BCEC</option>
       <option value="mbtaToBCM">Take public transportation from Somerville to the Boston Children's Museum</option>
-      <option value="drive">Drive from Brookline to the ICA</option>
+      <option value="drive">Drive from Brookline to a Seaport office</option>
     </select>
     <button type="button" id="generate-map">Let's go</button>
   </div>
@@ -72,7 +73,7 @@
   <script>
     L.mapbox.accessToken = 'pk.eyJ1IjoiZXJpY2F5ZWUiLCJhIjoiY2p0ZzhtaWdyMW02ODRibXVjenJwcHJzaiJ9.vIk_KKg89-GGHhbQtc5SCQ';
 
-    var mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken, {
+    var mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken, {
       attribution: '© <a href="https://www.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     });
 
@@ -80,6 +81,8 @@
     var map = L.map('map')
     .addLayer(mapboxTiles)
     .setView([42.362766, -71.083709], 13);
+
+    map.scrollWheelZoom.disable();
 
     document.querySelector("#generate-map").onclick = function() {
 
@@ -104,13 +107,15 @@
 
       map.remove();
 
-      mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken, {
+      mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken, {
         attribution: '© <a href="https://www.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       });
 
       map = L.map('map')
       .addLayer(mapboxTiles)
       .setView([42.362766, -71.083709], 13);
+
+      map.scrollWheelZoom.disable();
 
       var svg = d3.select(map.getPanes().overlayPane).append("svg");
 
@@ -174,6 +179,10 @@
         .attr("class", "locnames")
         .attr("y", function(d) {
           return -10
+        })
+        .attr("class", "locnames")
+        .attr("x", function(d) {
+          return -50
         })
 
         map.on("viewreset", reset);

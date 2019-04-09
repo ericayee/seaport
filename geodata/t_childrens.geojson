@@ -3,7 +3,7 @@
 "crs": { "type": "name",  "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 
 "features": [
-{ "type":"Feature", "properties":{ "latitude": 42.38710992859806, "longitude": -71.0987091064453, "time": 1, "id": "route1", "name": "Somerville" }, "geometry": { "type":"Point", "coordinates": [-71.0987091064453, 42.38710992859806]}},
+{ "type":"Feature", "properties":{ "latitude": 42.38710992859806, "longitude": -71.0987091064453, "time": 1, "id": "route1", "name": "Somerville City Hall" }, "geometry": { "type":"Point", "coordinates": [-71.0987091064453, 42.38710992859806]}},
 { "type":"Feature", "properties":{ "latitude": 42.38685634748887, "longitude": -71.0989236831665, "time": 2, "id": "route1", "name": "Along route" } , "geometry": { "type":"Point", "coordinates":[-71.0989236831665, 42.38685634748887]}},
 { "type":"Feature", "properties":{ "latitude": 42.38853630325105, "longitude": -71.10338687896729, "time": 3, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.10338687896729, 42.38853630325105]}},
 { "type":"Feature", "properties":{ "latitude": 42.39024791005226, "longitude": -71.10802173614502, "time": 4, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.10802173614502, 42.39024791005226]}},
@@ -39,5 +39,5 @@
 { "type":"Feature", "properties":{ "latitude": 42.351566891364364, "longitude": -71.05042934417725, "time": 34, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.05042934417725, 42.351566891364364]}},
 { "type":"Feature", "properties":{ "latitude": 42.35124973540876, "longitude": -71.04978561401367, "time": 35, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.04978561401367, 42.35124973540876]}},
 { "type":"Feature", "properties":{ "latitude": 42.35175718416955, "longitude": -71.04939937591553, "time": 36, "id": "route1", "name": "Along route" }, "geometry":{ "type":"Point", "coordinates":[-71.04939937591553, 42.35175718416955]}},
-{ "type":"Feature", "properties":{ "latitude": 42.35191576106715, "longitude": -71.0490560531616, "time": 37, "id": "route1", "name": "Boston Children's Museum" }, "geometry":{ "type":"Point", "coordinates":[-71.0490560531616, 42.35191576106715]}}
+{ "type":"Feature", "properties":{ "latitude": 42.35191576106715, "longitude": -71.0490560531616, "time": 37, "id": "route1", "name": "Children's Museum" }, "geometry":{ "type":"Point", "coordinates":[-71.0490560531616, 42.35191576106715]}}
 ]}
