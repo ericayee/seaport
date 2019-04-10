@@ -121,7 +121,7 @@
 
       var g = svg.append("g").attr("class", "leaflet-zoom-hide");
 
-      d3.json(route, function(collection) {
+      d3.json("../geodata/bike.geojson", function(collection) {
         var featuresdata = collection.features.filter(function(d) {
           return d.properties.id == "route1"
         })

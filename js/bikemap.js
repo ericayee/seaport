@@ -1,127 +1,22 @@
-<!DOCTYPE html>
-<html>
+L.mapbox.accessToken = 'pk.eyJ1IjoiZXJpY2F5ZWUiLCJhIjoiY2p0ZzhtaWdyMW02ODRibXVjenJwcHJzaiJ9.vIk_KKg89-GGHhbQtc5SCQ';
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
-  <link rel="stylesheet" href="https://use.typekit.net/hfj0jxt.css">
-  <script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
-  <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
-  <script src='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.js'></script>
-  <link href='https://api.mapbox.com/mapbox.js/v3.2.0/mapbox.css' rel='stylesheet' />
-  <style>
-    html,
-    body {
-      height: 500px;
-      width: 800px;
-    }
-    body {
-      margin: 0;
-    }
-    #map {
-      width: 100%;
-      height: 100%;
-    }
-    svg {
-      position: relative;
-    }
-    path {
-      stroke-width: 2px;
-      stroke-opacity: 1;
-    }
+var mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken, {
+  attribution: '© <a href="https://www.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+});
 
-    .waypoints {
-      fill: black;
-      opacity: 0;
-    }
-  }
-  .drinks {
-    stroke: black;
-    fill: red;
-  }
-  .lineConnect {
-    fill: none;
-    stroke: #4f5c5e;
-    opacity: 1;
-  }
-  .locnames {
-    fill: black;
-    font-weight: 400;
-    font-size: 14px;
-    font: mr-eaves-modern;
-  }
-</style>
+// blank map
+var map = L.map('map')
+.addLayer(mapboxTiles)
+.setView([42.362766, -71.083709], 13);
 
-</head>
+map.scrollWheelZoom.disable();
 
-<body>
-
-  <!-- drop down menu -->
-  <div>
-    <h3>How will you get to the Seaport today?</h3>
-    <select id="transit">
-      <option value="bike">Bike from Northeastern University to the ICA</option>
-      <option value="mbtaToBCEC">Take public transportation from the North End to BCEC</option>
-      <option value="mbtaToBCM">Take public transportation from Somerville to the Boston Children's Museum</option>
-      <option value="drive">Drive from Brookline to a Seaport office</option>
-    </select>
-    <button type="button" id="generate-map">Let's go</button>
-  </div>
-
-  <div id="map"></div>
-
-  <script>
-    L.mapbox.accessToken = 'pk.eyJ1IjoiZXJpY2F5ZWUiLCJhIjoiY2p0ZzhtaWdyMW02ODRibXVjenJwcHJzaiJ9.vIk_KKg89-GGHhbQtc5SCQ';
-
-    var mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken, {
-      attribution: '© <a href="https://www.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    });
-
-    // blank map
-    var map = L.map('map')
-    .addLayer(mapboxTiles)
-    .setView([42.362766, -71.083709], 13);
-
-    map.scrollWheelZoom.disable();
-
-    document.querySelector("#generate-map").onclick = function() {
-
-      var transitInput = document.getElementById("transit").value;
-
-      switch(transitInput) {
-        case "bike":
-          drawMap("geodata/bike.geojson", "media/bike_vector.png", 27);
-        break;
-        case "mbtaToBCEC":
-          drawMap("geodata/t_bcec.geojson", "media/train_vector.png", 16);
-        break;
-        case "mbtaToBCM":
-          drawMap("geodata/t_childrens.geojson", "media/train_vector.png", 36);
-        break;
-        case "drive":
-          drawMap("geodata/drive.geojson", "media/car_vector.png", 34);
-      }
-    };
-
-    function drawMap(route, vector, destNumber) {
-
-      map.remove();
-
-      mapboxTiles = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken, {
-        attribution: '© <a href="https://www.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      });
-
-      map = L.map('map')
-      .addLayer(mapboxTiles)
-      .setView([42.362766, -71.083709], 13);
-
-      map.scrollWheelZoom.disable();
 
       var svg = d3.select(map.getPanes().overlayPane).append("svg");
 
       var g = svg.append("g").attr("class", "leaflet-zoom-hide");
 
-      d3.json(route, function(collection) {
+      d3.json("../geodata/bike.geojson", function(collection) {
         var featuresdata = collection.features.filter(function(d) {
           return d.properties.id == "route1"
         })
@@ -157,10 +52,10 @@
         var marker = g.append("svg:image")
         .attr('width', 40)
         .attr('height', 40)
-        .attr("xlink:href", vector)
+        .attr("xlink:href", "../media/bike_vector.png")
         .attr("id", "marker");
 
-        var originANDdestination = [featuresdata[0], featuresdata[destNumber]]
+        var originANDdestination = [featuresdata[0], featuresdata[27]]
         var begend = g.selectAll(".drinks")
         .data(originANDdestination)
         .enter()
@@ -262,11 +157,3 @@
         var x = d.geometry.coordinates[0]
         return map.latLngToLayerPoint(new L.LatLng(y, x))
       }
-    }
-
-  </script>
-
-
-</body>
-
-</html>

@@ -32,6 +32,7 @@ h3 {
   font-size: 160%;
   background-color: #4f5c5e;
   color: #ffffff;
+  font-weight: 400;
 }
 
 p {
@@ -116,4 +117,38 @@ h4 {
 
 #thanks span {
   color: steelblue;
+}
+
+/* for map */
+#map {
+  height: 500px;
+  width: 800px;
+}
+svg {
+  position: relative;
+}
+path {
+  stroke-width: 2px;
+  stroke-opacity: 1;
+}
+
+.waypoints {
+  fill: black;
+  opacity: 0;
+}
+}
+.drinks {
+stroke: black;
+fill: red;
+}
+.lineConnect {
+fill: none;
+stroke: #4f5c5e;
+opacity: 1;
+}
+.locnames {
+fill: black;
+font-weight: 400;
+font-size: 14px;
+font: mr-eaves-modern;
 }
