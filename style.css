@@ -119,7 +119,7 @@ h4 {
   color: steelblue;
 }
 
-/* for map */
+/* for transportation map */
 #map {
   height: 600px;
   width: 600px;
@@ -155,6 +155,17 @@ fill: black;
 font-weight: 400;
 font-size: 14px;
 font: mr-eaves-modern;
+}
+
+/* for attractions map */
+#attractionsMap {
+  width: 600px;
+  height:600px;
+}
+
+.custom-popup .leaflet-popup-tip,
+.custom-popup .leaflet-popup-content-wrapper {
+  background-color: white;
 }
 
 /* for sticky */
