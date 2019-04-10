@@ -121,12 +121,14 @@ h4 {
 
 /* for map */
 #map {
-  height: 500px;
-  width: 800px;
+  height: 600px;
+  width: 600px;
 }
+
 svg {
   position: relative;
 }
+
 path {
   stroke-width: 2px;
   stroke-opacity: 1;
@@ -136,19 +138,54 @@ path {
   fill: black;
   opacity: 0;
 }
-}
+
 .drinks {
 stroke: black;
 fill: red;
 }
+
 .lineConnect {
 fill: none;
 stroke: #4f5c5e;
 opacity: 1;
 }
+
 .locnames {
 fill: black;
 font-weight: 400;
 font-size: 14px;
 font: mr-eaves-modern;
+}
+
+/* for sticky */
+
+.sticky-container {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.sticky-content {
+  position: relative;
+  display: flex;
+  flex: 1 0 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 25px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.sticky-graphic {
+  z-index: -100;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 10px;
+  height: 100vh;
+  flex: 1 0 50%;
+  text-align: center;
 }
