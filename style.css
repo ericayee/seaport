@@ -140,21 +140,21 @@ path {
 }
 
 .drinks {
-stroke: black;
-fill: red;
+  stroke: black;
+  fill: red;
 }
 
 .lineConnect {
-fill: none;
-stroke: #4f5c5e;
-opacity: 1;
+  fill: none;
+  stroke: #4f5c5e;
+  opacity: 1;
 }
 
 .locnames {
-fill: black;
-font-weight: 400;
-font-size: 14px;
-font: mr-eaves-modern;
+  fill: black;
+  font-weight: 400;
+  font-size: 14px;
+  font: mr-eaves-modern;
 }
 
 /* for attractions map */
@@ -166,6 +166,15 @@ font: mr-eaves-modern;
 .custom-popup .leaflet-popup-tip,
 .custom-popup .leaflet-popup-content-wrapper {
   background-color: white;
+}
+
+.leaflet-bar {
+  padding: 10px 10px 0px 10px;
+  font: 12px; */
+}
+
+.leaflet-popup-tip {
+    border: none !important;
 }
 
 /* for sticky */
@@ -195,7 +204,7 @@ font: mr-eaves-modern;
   z-index: -100;
   position: sticky;
   position: -webkit-sticky;
-  top: 10px;
+  top: 5px;
   height: 100vh;
   flex: 1 0 50%;
   text-align: center;
