@@ -121,7 +121,7 @@ h4 {
 /* for transportation map */
 #map {
   height: 600px;
-  width: 600px;
+  width: 100%;
 }
 
 svg {
@@ -218,6 +218,7 @@ path {
   }
 
   .sticky-graphic {
+    z-index: 500;
     flex: 1 0 100%;
     width: 100%;
   }
@@ -225,6 +226,7 @@ path {
   .sticky-content {
     flex: 1 0 100%;
     width: 100%;
+    z-index: -100;
   }
 
   .sticky-container {
