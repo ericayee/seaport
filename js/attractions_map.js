@@ -31,6 +31,7 @@ L.marker([42.351892, -71.049982], {icon: pointer}).bindPopup( "Boston Children's
 //L.control.layers(mapboxTilesAttr, null).addTo(aMap);
 
 aMap.scrollWheelZoom.disable();
+aMap.dragging.disable();
 
 var instructions = L.control({position: 'topright'});
 
