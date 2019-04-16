@@ -6,7 +6,7 @@ var mapboxTilesAttr = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light
 
 var aMap = L.map('attractionsMap')
 .addLayer(mapboxTilesAttr)
-.setView([42.351563, -71.043975], 15);
+.setView([42.354019, -71.044706], 14);
 
 // create custom icon
 var pointer = L.icon({

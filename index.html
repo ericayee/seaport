@@ -4,7 +4,15 @@
   <meta charset="utf-8">
   <title>Boston's Closed Port</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+  <meta name="viewport" content="height=device-height,
+                        width=device-width, initial-scale=1.0,
+                        minimum-scale=1.0, maximum-scale=1.0,
+                        user-scalable=no, target-densitydpi=device-dpi">
+
+
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
    crossorigin=""/>
@@ -59,7 +67,7 @@
       <div class="sticky-graphic column">
         <div id="map"></div>
       </div>
-      
+
       <section class="sticky-content">
 
         <h3>First stop: Logistics that don't work for many</h3>
@@ -125,6 +133,9 @@
     </div>
 
     <div class="sticky-container">
+      <div class="sticky-graphic column">
+        <div id="attractionsMap"></div>
+      </div>
 
       <section class="sticky-content">
 
@@ -141,11 +152,6 @@
         <p>The convention center’s events are usually designed for teens and adults, leaving parents of young children looking to go to the nationally-ranked Boston Children’s Museum. Tickets are $17 for all visitors over 12 months old, with members getting free admission. The similarly acclaimed Houston Children’s Museum is $12. The seaport’s attraction could easily be too much of a strain for a family, especially since people need to eat.</p>
 
       </section>
-
-      <div class="sticky-graphic column">
-        <!--<div class="controls leaflet-bar">Click on each location pin to see the attraction.</div>-->
-        <div id="attractionsMap"></div>
-      </div>
 
     </div>
 
