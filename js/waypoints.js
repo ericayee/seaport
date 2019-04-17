@@ -644,3 +644,16 @@ var waypointBCEC = new Waypoint({
     }
   }
 });
+
+var waypointrec1 = new Waypoint({
+  element: document.querySelector("#rec-transit"),
+  handler: function(direction) {
+
+    if(direction === "down") {
+      document.querySelector("#drawing").src = "./media/bridge-improvement.jpg"
+
+    } else if(direction === "up") {
+      document.querySelector("#drawing").src = "./media/recommendations-sketch.jpg"
+    }
+  }
+});
