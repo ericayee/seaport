@@ -249,4 +249,9 @@ path {
     width: 400px;
   }
 
+  #recs {
+    width: 100%;
+    height: auto;
+  }
+
 }
