@@ -1,10 +1,10 @@
 var svg;
 
+// waypoints for transportation map
 var waypointBike = new Waypoint({
   element: document.querySelector("#triggerBike"),
   handler: function(direction) {
     if(direction === "down") {
-      // console.log('works down')
 
       svg = d3.select(map.getPanes().overlayPane).append("svg");
 

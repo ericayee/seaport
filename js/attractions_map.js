@@ -28,8 +28,6 @@ L.marker([42.344494, -71.044987], {icon: pointer}).bindPopup("The Lawn on D<br/>
 L.marker([42.345493, -71.046382], {icon: pointer}).bindPopup("Boston Convention and Exhibition Center<br/><img src='./media/bcec.jpg' alt='ICA' width='200px'/>",customOptions).addTo(aMap);
 L.marker([42.351892, -71.049982], {icon: pointer}).bindPopup( "Boston Children's Museum<br/><img src='https://upload.wikimedia.org/wikipedia/commons/7/71/Boston_Children%27s_Museum.jpg' alt='ICA' width='200px'/></br>Credit: <a target=\'_blank\' href=\'https://commons.wikimedia.org/wiki/File:Boston_Children%27s_Museum.jpg\'>Tim Pierce</a>",customOptions).addTo(aMap);
 
-//L.control.layers(mapboxTilesAttr, null).addTo(aMap);
-
 aMap.scrollWheelZoom.disable();
 aMap.dragging.disable();
 

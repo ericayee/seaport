@@ -1,5 +1,5 @@
-/* Place your styles in this section */
 
+/* Mr. Eaves Modern Book */
 @import url("https://use.typekit.net/hfj0jxt.css");
 
 * {
@@ -173,11 +173,16 @@ path {
 
 .leaflet-bar {
   padding: 10px 10px 0px 10px;
-  font: 12px; */
+  font: 12px;
 }
 
 .leaflet-popup-tip {
     border: none !important;
+}
+
+/* for recommendation drawing */
+#recs-img {
+  width: 960px;
 }
 
 /* for sticky */
@@ -214,6 +219,8 @@ path {
   margin-top: -10px;
 }
 
+/* for responsive design on mobile devices */
+
 @media only screen and (max-width: 480px) {
   p {
     margin-left: 0px;
@@ -240,16 +247,15 @@ path {
 
   #map {
     margin-top: -10px;
-    width: 400px;
-    height: 400px;
+    width: 100%;
   }
 
   #attractionsMap{
     margin-top: -10px;
-    width: 400px;
+    width: 100%;
   }
 
-  #recs {
+  #recs-img {
     width: 100%;
     height: auto;
   }
