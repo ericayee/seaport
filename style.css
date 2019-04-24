@@ -188,6 +188,7 @@ path {
 /* for recommendation drawing */
 #recs-img {
   width: 960px;
+  margin: auto;
 }
 
 /* for sticky */
