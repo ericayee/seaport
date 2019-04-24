@@ -171,6 +171,11 @@ path {
   background-color: white;
 }
 
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  color: #4682b4 !important;
+  font-weight: bold;
+}
+
 .leaflet-bar {
   padding: 10px 10px 0px 10px;
   font: 12px;
